@@ -13,6 +13,8 @@ export const SITE_DESCRIPTION =
 export const KEYWORDS =
   "flight school Tennessee, flight training Shelbyville TN, pilot school Tupelo MS, learn to fly in Tennessee, private pilot program RV-12, accelerated flight training TN, how to become a pilot Mississippi, technically advanced aircraft training, RV-12 flight lessons, pro pilot training TN MS, modern flight school, affordable flight school Southeast, flight school near Nashville, Tupelo flight academy";
 
+export const LOGO = "/src/assets/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.png";
+
 // LOCATIONS
 export const LOCATIONS = [
   {
