@@ -27,7 +27,7 @@ const year = date.getFullYear();
 const { pathname } = Astro.url;
 ---
 
-<footer class="relative bg-gradient-to-br from-primary-900 font-sans to-black">
+<footer class="relative bg-gradient-to-br from-gray-100 font-sans to-accent-200">
   <div
     class="px-4 pt-24 pb-16 lg:pb-2 md:pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
   >
@@ -47,7 +47,7 @@ const { pathname } = Astro.url;
         </a>
         <div class="mt-2 lg:max-w-sm font-sans2">
           <p
-            class="text-sm text-white px-3 lg:px-0 text-center lg:text-justify"
+            class="text-sm text-gray-900 px-3 lg:px-0 text-center lg:text-justify"
           >
             {SITE_DESCRIPTION}
           </p>
@@ -56,13 +56,13 @@ const { pathname } = Astro.url;
           >
             <a
               href="/privacy-policy"
-              class="mt-3 mr-4 transition-colors duration-300 text-sm text-white hover:text-accent-100"
+              class="mt-3 mr-4 transition-colors duration-300 text-sm text-gray-900 hover:text-accent-950"
               >Privacy Policy
             </a>
-            <span class="text-accent-200 text-sm pt-3"> &#x2022; </span>
+            <span class="text-accent-900 text-sm pt-3"> &#x2022; </span>
             <a
               href="/terms-of-service"
-              class="mt-3 ml-4 transition-colors duration-300 text-sm text-white hover:text-accent-100"
+              class="mt-3 ml-4 transition-colors duration-300 text-sm text-gray-900 hover:text-accent-950"
               >Terms of Service
             </a>
           </div>
@@ -74,7 +74,7 @@ const { pathname } = Astro.url;
             <div
               class={`${index % 2 === 0 ? "text-left" : "text-right lg:text-left"} lg:col-span-2`}
             >
-              <p class="font-bold text-xl font-sans lg:text-md tracking-wide text-accent-200">
+              <p class="font-bold text-xl font-sans lg:text-md tracking-wide text-accent-900">
                 {column.title}
               </p>
               <ul class="mt-2 space-y-2 text-lg font-sans2 lg:text-sm">
@@ -83,7 +83,7 @@ const { pathname } = Astro.url;
                     <a
                       href={link.link}
                       target={link.target}
-                      class="transition-colors duration-300 text-white hover:text-accent-100"
+                      class="transition-colors duration-300 text-gray-900 hover:text-accent-950"
                     >
                       {link.name}
                     </a>
@@ -96,15 +96,15 @@ const { pathname } = Astro.url;
         <div class="grid grid-cols-1 gap-y-4 lg:col-span-3">
           {
             LOCATIONS.map((location, index) => (
-              <div class="text-right lg:text-center bg-accent-100/20 rounded p-2 lg:pt-8 text-sm lg:text-lg">
+              <div class="text-right lg:text-center bg-accent-950/20 rounded p-2 lg:pt-8 text-sm lg:text-lg">
                 <p
-                  class="font-bold tracking-wide text-base text-accent-200 leading-none"
+                  class="font-bold tracking-wide text-base text-accent-900 leading-none"
                   set:html={location.title}
                 />
                 <a
                   href={location.gMaps}
                   target="_blank"
-                  class="mt-2 space-y-1 font-sans2 transition-colors text-xs lg:text-base duration-300 text-white hover:text-accent-100"
+                  class="mt-2 space-y-1 font-sans2 transition-colors text-xs lg:text-base duration-300 text-gray-900 hover:text-accent-950"
                 >
                   <>
                     <span class="">{location.address}</span>
@@ -116,7 +116,7 @@ const { pathname } = Astro.url;
                 </a>
                 <a aria-labelledby="Call Us Now" title="Call Us Now"
                   href={`tel:${location.phone}`}
-                  class="mt-3 text-right justify-end lg:justify-center font-sans2 lg:text-center transition-colors duration-300 text-white hover:text-accent-100 flex items-center align-middle"
+                  class="mt-3 text-right justify-end lg:justify-center font-sans2 lg:text-center transition-colors duration-300 text-gray-900 hover:text-accent-950 flex items-center align-middle"
                 >
                   <FaPhoneSquareAlt className="mr-2 text-lg" />
                   {location.phone}
@@ -132,15 +132,15 @@ const { pathname } = Astro.url;
     <div
       class="mx-auto flex flex-col gap-2 lg:flex-row justify-between items-center align-middle max-w-7xl"
     >
-      <p class="text-sm text-gray-100 text-center">
+      <p class="text-sm text-gray-700 text-center">
         © Copyright {year} {COMPANY_NAME} LLC. All rights reserved.
       </p>
-      <span class="text-white text-center flex gap-2">
+      <span class="text-gray-900 text-center flex gap-2">
         Powered by
         <a
           href="https://rightruddermarketing.com/"
           target="_blank"
-          class="text-bold group hover:underline hover:text-white/70 flex gap-2 duration-200"
+          class="text-bold group hover:underline hover:text-gray-900/70 flex gap-2 duration-200"
         >
           <ImageComp
             imagePath="/src/assets/RRM-R-symbol-474.webp"
@@ -158,7 +158,7 @@ const { pathname } = Astro.url;
           target="_blank"
           aria-label="Instagram"
           title="Instagram"
-          class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
+          class="transition-colors duration-300 text-gray-900 hover:text-gray-900/70 hover:scale-105"
         >
           <svg viewBox="0 0 30 30" fill="currentColor" class="h-10 lg:h-6">
             <circle cx="15" cy="15" r="4"></circle>
@@ -172,7 +172,7 @@ const { pathname } = Astro.url;
           target="_blank"
           aria-label="Facebook"
           title="Facebook"
-          class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
+          class="transition-colors duration-300 text-gray-900 hover:text-gray-900/70 hover:scale-105"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" class="h-8 lg:h-5">
             <path
