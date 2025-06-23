@@ -78,7 +78,7 @@ const Navbar = ({ pathname }) => {
     <nav >
       <div
         className={`${
-          navBar || openMobile ? "bg-accent-600" : "bg-transparent"
+          navBar || openMobile ? "bg-transparent backdrop-blur-lg rounded-sm max-w-7xl mx-auto" : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
@@ -86,22 +86,23 @@ const Navbar = ({ pathname }) => {
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle justify-between transition-all`}
             id="navbar"
           >
-            <div className="flex w-full items-center justify-between flex-auto">
+            <div className="flex w-full items-center justify-between gap-5 flex-auto">
               <a
                 href="/"
                 className="relative hover:brightness-110 duration-200 ease-in-out w-1/3"
               >
                 <img
-                  src="/uft-logo-new-bg-blue-removebg-preview.webp"
-                  alt="Universal Flight Training Logo"
-                  aria-label="Universal Flight Training Logo"
-                  title="Universal Flight Training"
+                  src="/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg"
+                  alt="Hawkins Flight Academy Logo"
+                  aria-label="Hawkins Flight Academy Logo"
+                  title="Hawkins Flight Academy"
                   loading="lazy"
                   className={`${navBar || openMobile ? "h-20 lg:h-24" : "h-20 lg:h-28"} object-contain duration-500`}
                 />
               </a>
-              <div className="hidden lg:flex 2xl:justify-end w-full text-2xl">
-                <ul className="flex justify-between align-middle w-11/12 gap-5 items-center">
+              <div className="hidden lg:flex w-full text-2xl">
+                {/* <ul className="flex justify-start align-middle w-11/12 gap-5 items-center"> */}
+                <ul className={`${navBar || openMobile ? "flex justify-around items-center" : "flex justify-start text-lg items-end"} align-middle w-11/12 gap-5 `}>
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -113,25 +114,26 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="group-last:block font-medium text-2xl duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-500 group-last:hover:no-underline group-last:border group-last:hover:border-accent-500"
+                          className="group-last:block  font-semibold duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-500 group-last:hover:no-underline"
                         >
-                          <span className="relative font-medium block italic group-last:skew-x-12 text-white group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white">
+                          {/* <span className="relative font-medium block italic group-last:skew-x-12 text-blue-900 group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white"> */}
+                          <span className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2 pt-6"} relative font-medium block italic group-last:skew-x-12 text-blue-900 group-last:text-muted-950 group-last:hover:text-white`}>
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-medium cursor-default text-white text-2xl duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-medium cursor-default text-blue-900 text-2xl duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-16 bg-white border-b-4 border-white whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-16 bg-white rounded-sm border-b-4 border-white whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "scale-110 bg-accent-600 text-white" : ""} relative -skew-x-12 hover:bg-accent-600 hover:scale-110 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
+                              className={`${isActive(subitem, pathname) ? "scale-110 bg-accent-600 text-blue-900" : ""} relative rounded-sm -skew-x-12 hover:bg-accent-600 hover:scale-110 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -194,7 +196,7 @@ const Navbar = ({ pathname }) => {
                 <span className="sr-only">Open main menu</span>
 
                 <svg
-                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-white`}
+                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-blue-900`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2.0"
@@ -210,7 +212,7 @@ const Navbar = ({ pathname }) => {
                 </svg>
 
                 <svg
-                  className={`${openMobile ? "block" : "hidden"} h-6 w-6 text-white`}
+                  className={`${openMobile ? "block" : "hidden"} h-6 w-6 text-blue-900`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2.0"
@@ -260,10 +262,10 @@ const Navbar = ({ pathname }) => {
           className="z-30 relative flex justify-center items-center align-middle"
         >
           <img
-            src="/uft-logo-new-bg-blue-removebg-preview.webp"
-            alt="Universal Flight Training Logo"
-            aria-label="Universal Flight Training Logo"
-            title="Universal Flight Training"
+            src="/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg"
+            alt="Hawkins Flight Academy Logo"
+            aria-label="Hawkins Flight Academy Logo"
+            title="Hawkins Flight Academy"
             className="object-contain h-24 w-auto drop-shadow-sm"
           />
         </a>
@@ -287,7 +289,7 @@ const Navbar = ({ pathname }) => {
                 <a
                   href={item.link}
                   target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                  className="font-normal text-3xl block p-5 duration-300 text-white border-accent-200 whitespace-nowrap group-last:bg-accent-600 group-last:font-medium group-last:border-2 group-last:mt-5 group-last:py-4 group-last:px-8 group-last:-skew-x-12 group-last:text-center group-last:mx-5"
+                  className="font-normal text-3xl block p-5 duration-300 text-blue-900 border-accent-200 whitespace-nowrap group-last:bg-accent-600 group-last:font-medium group-last:border-2 group-last:mt-5 group-last:py-4 group-last:px-8 group-last:-skew-x-12 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
@@ -368,7 +370,7 @@ const Navbar = ({ pathname }) => {
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-accent-200 rounded-full bg-black"
             >
-              <FaPhone className="size-4 text-white" />
+              <FaPhone className="size-4 text-blue-900" />
             </a>
             <a aria-labelledby="Call Us Now" title="Call Us Now" href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
