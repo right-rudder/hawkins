@@ -8,7 +8,7 @@ interface Props {
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {
   title,
@@ -43,7 +43,7 @@ const {
 <meta name="robots" content="index, follow" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<!-- <link rel="canonical" href={canonicalURL} /> -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
