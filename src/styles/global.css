@@ -16,7 +16,7 @@
   }
 
   .btn-accent {
-    @apply text-center font-bebas uppercase py-3 px-6 w-fit rounded-sm hover:text-white duration-300 bg-accent-500 text-white font-medium text-3xl hover:bg-accent-400 -skew-x-12;
+    @apply text-center font-bebas uppercase py-3 px-6 w-fit rounded-sm hover:text-white duration-300 bg-accent-900 text-white font-medium text-3xl hover:bg-accent-400 -skew-x-12;
   }
 
   .btn-animate {
@@ -71,4 +71,23 @@
 
 .swiper-slide {
   height: auto !important;
+}
+
+.bg-logo {
+  position: relative;
+  background: linear-gradient(to right, #ffffffc2 0%, #ffffffc2 100%);
+  z-index: 0;
+}
+
+.bg-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-Untitled-design-2.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.07;
+  filter: grayscale(1);
+  z-index: -1;
 }
