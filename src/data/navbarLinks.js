@@ -1,10 +1,5 @@
 export const navbarLinks = [
   {
-    name: "Start Here",
-    link: "/pilot-training-guide",
-    submenu: [],
-  },
-  {
     name: "Pilot Programs",
     link: "/programs",
     submenu: [
@@ -32,25 +27,6 @@ export const navbarLinks = [
       //   name: "Sport Pilot",
       //   link: "/programs/sport-pilot",
       // },
-    ],
-  },
-  {
-    name: "University Program",
-    link: "/university-program",
-    submenu: [],
-  },
-  {
-    name: "Services",
-    link: "/services/maintenance",
-    submenu: [
-      {
-        name: "Maintenance",
-        link: "/services/maintenance",
-      },
-      {
-        name: "CATS Testing",
-        link: "/services/cats",
-      },
     ],
   },
   {
