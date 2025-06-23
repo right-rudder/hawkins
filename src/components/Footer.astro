@@ -5,6 +5,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import {
   COMPANY_NAME,
+  LOGO,
   EMAIL_ADDRESS,
   PHONE_NUMBER,
   ADDRESS_LINE_1,
@@ -18,8 +19,6 @@ import {
   LOCATIONS,
 } from "../consts";
 import { footerLinks } from "../data/footerLinks";
-import logo from "../assets/uft-logo-new-bg-blue-removebg-preview.png";
-import { Image } from "astro:assets";
 import ImageComp from "./ImageComp.astro";
 
 const date = new Date();
@@ -40,12 +39,10 @@ const { pathname } = Astro.url;
           title="Company"
           class="flex justify-center items-center w-full"
         >
-          <Image
-            src={logo}
-            alt="Universal Flight Training Logo"
+          <ImageComp
+            imagePath={LOGO}
+            imageAlt="Universal Flight Training Logo"
             class="object-contain h-36 w-auto px-5 lg:px-0 drop-shadow-lg"
-            widths={[240, 540, 720, 1080, 1440, 1980]}
-            sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
           />
         </a>
         <div class="mt-2 lg:max-w-sm font-sans2">
