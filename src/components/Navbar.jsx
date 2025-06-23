@@ -78,7 +78,7 @@ const Navbar = ({ pathname }) => {
     <nav >
       <div
         className={`${
-          navBar || openMobile ? "bg-white/30 backdrop-blur-lg" : "bg-transparent"
+          navBar || openMobile ? "bg-white/80 backdrop-blur-sm drop-shadow-lg" : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
@@ -89,7 +89,7 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between gap-5 flex-auto">
               <a
                 href="/"
-                className="relative hover:brightness-110 duration-200 ease-in-out w-1/3"
+                className="relative hover:brightness-110 duration-200 ease-in-out w-1/4"
               >
                 <img
                   // src="/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg"
@@ -103,7 +103,7 @@ const Navbar = ({ pathname }) => {
               </a>
               <div className="hidden lg:flex w-full text-2xl">
                 {/* <ul className="flex justify-start align-middle w-11/12 gap-5 items-center"> */}
-                <ul className={`${navBar || openMobile ? "flex justify-around items-center" : "flex justify-start text-lg items-center"} align-middle w-11/12 gap-5 `}>
+                <ul className={`${navBar || openMobile ? "flex justify-around items-center" : "flex justify-start text-xl items-center"} align-middle w-11/12 gap-5 `}>
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -115,7 +115,7 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="group-last:block  font-semibold duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-900 group-last:hover:no-underline"
+                          className="group-last:block  font-semibold duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-primary-200 group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-900 group-last:hover:no-underline"
                         >
                           {/* <span className="relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white"> */}
                           <span className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2"} relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:hover:text-white`}>
@@ -129,7 +129,7 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-16 bg-white rounded-sm border-b-4 border-white whitespace-nowrap text-accent-900 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-16 bg-white/90 rounded-sm border-b-4 border-white whitespace-nowrap text-accent-900 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
