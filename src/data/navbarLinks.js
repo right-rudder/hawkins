@@ -1,6 +1,11 @@
 export const navbarLinks = [
   {
-    name: "Pilot Programs",
+    name: "New to Flying?",
+    link: "/new-to-flying",
+    submenu: [],
+  },
+  {
+    name: "Programs",
     link: "/programs",
     submenu: [
       {
@@ -23,10 +28,6 @@ export const navbarLinks = [
         name: "Flight Instructor",
         link: "/programs/certified-flight-instructor-cfi",
       },
-      // {
-      //   name: "Sport Pilot",
-      //   link: "/programs/sport-pilot",
-      // },
     ],
   },
   {
