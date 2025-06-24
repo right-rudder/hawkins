@@ -9,7 +9,7 @@ import EnrollForm from "../components/EnrollForm.astro";
 ---
 
 <section
-  class="relative z-10 bg-checkered bg-fixed text-accent-100 scroll-my-20 lg:scroll-my-28"
+  class="bg-checkered bg-fixed text-accent-100 scroll-my-20 lg:scroll-my-28"
   id="contact"
 >
   <div class="relative z-10 max-w-7xl mx-auto">
@@ -59,7 +59,7 @@ import EnrollForm from "../components/EnrollForm.astro";
                       ></path>
                     </svg>
                   </div>
-                  <a href={location.gMaps} class="ml-5 p-text text-gray-300">
+                  <a href={location.gMaps} target="_blank" rel="noopener noreferrer" class="ml-5 p-text text-gray-300">
                     <span set:html={location.title}></span><br />
                     {location.address}<br />
                     {location.city}, {location.state}
@@ -85,7 +85,7 @@ import EnrollForm from "../components/EnrollForm.astro";
                     </svg>
                   </div>
                   <div class="ml-5 p-text text-gray-300">
-                    <a href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a><br />
+                    <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a><br />
                   </div>
                 </div>
               ))
@@ -126,7 +126,7 @@ import EnrollForm from "../components/EnrollForm.astro";
                 >
               </div>
               <div class="ml-5 p-text text-gray-300">
-                9:00 AM to 5:00 PM<br />
+                7:00 AM to 7:00 PM<br />
                 All other times by appointment
               </div>
             </div>
