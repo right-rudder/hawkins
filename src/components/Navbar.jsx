@@ -75,13 +75,13 @@ const Navbar = ({ pathname }) => {
   };
 
   return (
-    <nav>
+    <nav >
       <div
         className={`${
           navBar || openMobile
             ? "bg-white/40 backdrop-blur-sm drop-shadow-sm"
             : "bg-transparent"
-        } duration-500`}
+        } transition-all duration-500 ease-in-out`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
           <div
@@ -104,7 +104,7 @@ const Navbar = ({ pathname }) => {
                   aria-label="Hawkins Flight Academy Logo"
                   title="Hawkins Flight Academy"
                   loading="lazy"
-                  className={`${navBar || openMobile ? "h-20 lg:h-24" : "h-20 lg:h-28"} object-contain duration-500`}
+                  className={`${navBar || openMobile ? "h-20 lg:h-24" : "h-20 lg:h-28"} object-contain transition-all duration-500 ease-in-out`}
                 />
               </a>
               <div className="hidden lg:flex w-full text-2xl justify-end items-center">
