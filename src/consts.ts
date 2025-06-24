@@ -25,9 +25,8 @@ export const LOCATIONS = [
     city: "Shelbyville",
     state: "TN",
     zip: "37160",
-    gMaps: "https://maps.app.goo.gl/eHXTVeDbzWk1K8D57",
+    gMaps: "https://maps.app.goo.gl/Tuus6qhHUSyHq5649",
     phone: "(931) 488-5969",
-    forwardPhone: "(931) 488-5969",
   },
   {
     title: `Tupelo Regional Airport<br><small class="text-xs -mt-3">KTUP</small>`,
@@ -35,9 +34,8 @@ export const LOCATIONS = [
     city: "Tupelo",
     state: "MS",
     zip: "38801",
-    gMaps: "https://maps.app.goo.gl/pNzAgztRRccLU7TY6",
+    gMaps: "https://maps.app.goo.gl/esZxWWHFJ8fYFgdu5",
     phone: "(931) 488-5969",
-    forwardPhone: "(931) 488-5969",
   },
 ];
 
