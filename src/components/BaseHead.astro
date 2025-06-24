@@ -1,0 +1,211 @@
+---
+import "../styles/global.css";
+import { FAVICON } from "../consts";
+
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  image?: string;
+}
+
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const {
+  title,
+  description,
+  keywords,
+  image = "hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.png",
+} = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<!-- Site Created By:    
+       _____  _       _     _     _____           _     _           
+      |  __ \(_)     | |   | |   |  __ \         | |   | |          
+      | |__) |_  __ _| |__ | |_  | |__) |   _  __| | __| | ___ _ __ 
+      |  _  /| |/ _` | '_ \| __| |  _  / | | |/ _` |/ _` |/ _ \ '__|
+      | | \ \| | (_| | | | | |_  | | \ \ |_| | (_| | (_| |  __/ |   
+      |_|  \_\_|\__, |_| |_|\__| |_|  \_\__,_|\__,_|\__,_|\___|_|   
+      |  \/  |   __/ |  | |      | | (_)                            
+      | \  / | _|___/ __| | _____| |_ _ _ __   __ _                 
+      | |\/| |/ _` | '__| |/ / _ \ __| | '_ \ / _` |                
+      | |  | | (_| | |  |   <  __/ |_| | | | | (_| |                
+      |_|  |_|\__,_|_|  |_|\_\___|\__|_|_| |_|\__, |                
+                                               __/ |                
+                                              |___/                 
+
+    Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com/contact-us -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/png" href={FAVICON} />
+<meta name="generator" content={Astro.generator} />
+<meta name="robots" content="index, follow" />
+
+<!-- Canonical URL -->
+<!-- <link rel="canonical" href={canonicalURL} /> -->
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Preconnect to Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Preload the Google Font stylesheet -->
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+
+<!-- Fallback if JavaScript is disabled -->
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
+</noscript>
+
+<!-- NEED TO UPDATE SCHEMA -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Universal Flight Training",
+    "alternateName": ["UFT", "Universal Flight School"],
+    "description": "Universal Flight Training offers premier flight instruction at Sarasota Bradenton International Airport with a 98% checkride pass rate. From Private Pilot to CFI courses, our experienced instructors provide personalized training with modern aircraft. Begin your aviation journey with Florida's trusted flight school.",
+    "keywords": "flight school Sarasota, pilot training Florida, discovery flight Sarasota, how to become a pilot, Private Pilot License Sarasota FL, flight instructor certification, instrument rating training, commercial pilot courses Florida",
+    "image": "/uft-logo-new-bg-gradient-blue.png",
+    "logo": "/uft-logo-oval.png",
+    "telephone": "(941) 300-0309",
+    "email": "universalflight@gmail.com",
+    "foundingDate": "2010",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8140 15th St E",
+      "addressLocality": "Sarasota",
+      "addressRegion": "FL",
+      "addressCountry": "US",
+      "postalCode": "34243"
+    },
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.395872705629657,
+        "longitude": -82.5474482
+      },
+      "geoRadius": 9000
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "26",
+      "bestRating": "5"
+    },
+    "url": "https://www.flyuft.com/",
+    "sameAs": [
+      "https://www.facebook.com/universalflighttrainingllc",
+      "https://www.instagram.com/universalflighttrainingllc/",
+      "https://www.linkedin.com/company/universal-flight-training"
+    ],
+    "priceRange": "$$$",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 27.395872705629657,
+      "longitude": -82.5474482
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Private Pilot License Training",
+          "description": "Comprehensive training for individuals seeking to earn their Private Pilot License (PPL)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Instrument Rating Training",
+          "description": "Advanced training for pilots looking to fly in instrument meteorological conditions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Pilot Training",
+          "description": "Professional training for pilots pursuing a career in aviation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Flight Instructor Certification",
+          "description": "Training for pilots who want to become certified flight instructors"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Discovery Flights",
+          "description": "Introductory flights for those interested in experiencing flying and aviation"
+        }
+      }
+    ],
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "IATA Code",
+        "value": "SRQ"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ICAO Code",
+        "value": "KSRQ"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Airport Code",
+        "value": "SRQ"
+      }
+    ],
+    "hasMap": "https://maps.app.goo.gl/ajW9ZBsc3iLjU28N6"
+  }
+</script>

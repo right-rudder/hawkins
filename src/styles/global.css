@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Vipnagorgialla";
+  src: url("/fonts/vipnagorgialla-rg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-center font-bebas text-5xl uppercase font-bold py-3 px-6 bg-primary-700 w-fit text-white rounded-sm hover:bg-primary-800 duration-300;
+  }
+
+  .btn-accent {
+    @apply text-center font-bebas uppercase py-3 px-6 w-fit rounded-sm hover:text-white duration-300 bg-accent-900 text-white font-medium text-3xl hover:bg-accent-400 -skew-x-12;
+  }
+
+  .btn-animate {
+    @apply hover:before:bg-black/30 relative overflow-hidden px-3 text-white transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-black before:transition-all before:duration-300 hover:before:left-0 hover:before:w-full ease-in-out;
+  }
+  .btn-white {
+    @apply text-center font-bebas text-4xl uppercase font-bold py-3 px-6 ring-1 ring-white w-fit bg-white/10 hover:bg-white/80 hover:ring-white/50 hover:text-primary-950 text-primary-50 rounded-sm duration-300;
+  }
+
+  .paragraph {
+    @apply text-gray-600 lg:text-base leading-loose font-sans;
+  }
+
+  .tooltip {
+    @apply invisible opacity-0 absolute rounded-sm shadow-md shadow-slate-800/50 bg-gray-50 text-center text-gray-800;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible opacity-95 transition-all duration-300 cursor-help;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply bg-gray-100 opacity-20 hover:opacity-70 duration-300 ease-in-out px-8 py-9;
+  }
+
+  p {
+    @apply font-sans2;
+  }
+}
+
+.outlined-text {
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+}
+
+/* .swiper-wrapper {
+  height: 100% !important;
+} */
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.bg-logo {
+  position: relative;
+  background: linear-gradient(to right, #ffffffc2 0%, #ffffffc2 100%);
+  z-index: 0;
+}
+
+.bg-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.07;
+  filter: grayscale(1);
+  z-index: -1;
+}
+
+.bg-checkered {
+  background-image:linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%), url("/shelbyville-tennessee-flight-school-tupelo-mississippi-hawkins-flight-academy-discovery-flight.jpeg");
+  z-index: -100;
+}
+
+
+* {
+  @apply box-border;
+}
