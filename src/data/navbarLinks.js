@@ -1,12 +1,12 @@
 export const navbarLinks = [
   {
     name: "New to Flying?",
-    link: "/new-to-flying",
+    link: "#new-to-flying",
     submenu: [],
   },
   {
     name: "Programs",
-    link: "/programs",
+    link: "#programs",
     submenu: [
       {
         name: "Private Pilot",
@@ -32,7 +32,7 @@ export const navbarLinks = [
   },
   {
     name: "About",
-    link: "/about/our-crew",
+    link: "#about",
     submenu: [
       {
         name: "Our Crew",
@@ -54,7 +54,7 @@ export const navbarLinks = [
   },
   {
     name: "Enroll Today",
-    link: "/enroll-now",
+    link: "#enroll-now",
     submenu: [],
   },
 ];
