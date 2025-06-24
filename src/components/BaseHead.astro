@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { FAVICON } from "../consts";
 
 interface Props {
   title: string;
@@ -38,7 +39,7 @@ const {
     Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com/contact-us -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/logo-new.ico" />
+<link rel="icon" type="image/png" href={FAVICON} />
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content="index, follow" />
 
