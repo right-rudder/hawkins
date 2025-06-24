@@ -50,11 +50,11 @@ const Navbar = ({ pathname }) => {
           item.link + "/" === pathname ||
           item.subsubmenu?.some(
             (subItem) =>
-              subItem.link === pathname || subItem.link + "/" === pathname
-          )
+              subItem.link === pathname || subItem.link + "/" === pathname,
+          ),
       ) ||
       menuItem?.subsubmenu?.some(
-        (item) => item.link === pathname || item.link + "/" === pathname
+        (item) => item.link === pathname || item.link + "/" === pathname,
       ) ||
       menuItem.link === pathname ||
       menuItem.link + "/" === pathname;
@@ -75,10 +75,12 @@ const Navbar = ({ pathname }) => {
   };
 
   return (
-    <nav >
+    <nav>
       <div
         className={`${
-          navBar || openMobile ? "bg-white/80 backdrop-blur-sm drop-shadow-lg" : "bg-transparent"
+          navBar || openMobile
+            ? "bg-white/40 backdrop-blur-sm drop-shadow-sm"
+            : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
@@ -93,7 +95,11 @@ const Navbar = ({ pathname }) => {
               >
                 <img
                   // src="/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg"
-                  src={navBar || openMobile ? "/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg" : "/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-Untitled-design-2.svg"}
+                  src={
+                    navBar || openMobile
+                      ? "/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.svg"
+                      : "hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg"
+                  }
                   alt="Hawkins Flight Academy Logo"
                   aria-label="Hawkins Flight Academy Logo"
                   title="Hawkins Flight Academy"
@@ -101,9 +107,11 @@ const Navbar = ({ pathname }) => {
                   className={`${navBar || openMobile ? "h-20 lg:h-24" : "h-20 lg:h-28"} object-contain duration-500`}
                 />
               </a>
-              <div className="hidden lg:flex w-full text-2xl">
+              <div className="hidden lg:flex w-full text-2xl justify-end items-center">
                 {/* <ul className="flex justify-start align-middle w-11/12 gap-5 items-center"> */}
-                <ul className={`${navBar || openMobile ? "flex justify-around items-center" : "flex justify-start text-xl items-center"} align-middle w-11/12 gap-5 `}>
+                <ul
+                  className={`${navBar || openMobile ? "flex justify-end text-xl items-center" : "flex justify-start text-xl items-center"} align-middle w-full gap-5 `}
+                >
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -118,7 +126,9 @@ const Navbar = ({ pathname }) => {
                           className="group-last:block  font-semibold duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-primary-200 group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-900 group-last:hover:no-underline"
                         >
                           {/* <span className="relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white"> */}
-                          <span className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2 shadow-sm"} relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:hover:text-white`}>
+                          <span
+                            className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2 shadow-sm"} relative font-medium block italic group-last:skew-x-12 text-accent-900 font-pop group-last:text-muted-950 group-last:hover:text-white`}
+                          >
                             {item.name}
                           </span>
                         </a>
@@ -171,7 +181,7 @@ const Navbar = ({ pathname }) => {
                                             {subsubitem.name}
                                           </a>
                                         </li>
-                                      )
+                                      ),
                                     )}
                                   </ul>
                                 )}
@@ -367,13 +377,21 @@ const Navbar = ({ pathname }) => {
 
         <div className="p-5 px-10 font-normal flexfont-thinustify-center align-middle items-center gap-5 overflow-hidden">
           <div className="flex gap-3 items-center">
-            <a aria-labelledby="Call Us Now" title="Call Us Now"
+            <a
+              aria-labelledby="Call Us Now"
+              title="Call Us Now"
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-accent-200 rounded-full bg-black"
             >
               <FaPhone className="size-4 text-accent-900" />
             </a>
-            <a aria-labelledby="Call Us Now" title="Call Us Now" href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
+            <a
+              aria-labelledby="Call Us Now"
+              title="Call Us Now"
+              href={`tel:${PHONE_NUMBER}`}
+            >
+              {PHONE_NUMBER}
+            </a>
           </div>
 
           <div className="flex gap-3 mt-2 mb-16">
