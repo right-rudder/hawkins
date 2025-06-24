@@ -88,7 +88,7 @@ const Navbar = ({ pathname }) => {
           >
             <div className="flex w-full items-center justify-between gap-5 flex-auto">
               <a
-                href="/"
+                href="#"
                 className="relative hover:brightness-110 duration-200 ease-in-out w-1/4"
               >
                 <img
@@ -118,7 +118,7 @@ const Navbar = ({ pathname }) => {
                           className="group-last:block  font-semibold duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-primary-200 group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-900 group-last:hover:no-underline"
                         >
                           {/* <span className="relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white"> */}
-                          <span className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2"} relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:hover:text-white`}>
+                          <span className={`${navBar || openMobile ? "group-last:py-3 group-last:px-5" : "group-last:px-2 shadow-sm"} relative font-medium block italic group-last:skew-x-12 text-accent-900 group-last:text-muted-950 group-last:hover:text-white`}>
                             {item.name}
                           </span>
                         </a>
