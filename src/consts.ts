@@ -74,7 +74,7 @@ export const COURSES = [
 // CHANGE client business info
 export const COMPANY_NAME = "Hawkins Flight Academy";
 export const COMPANY_NAME_CAPS = "HAWKINS FLIGHT ACADEMY";
-export const COMPANY_NICKNAME = "HFA";
+export const COMPANY_NICKNAME = "Hawkins";
 export const PHONE_NUMBER = "(931) 488-5969";
 export const ADDRESS_LINE_1 = "2828 Hwy 231 N";
 export const ADDRESS_LINE_2 = "Shelbyville, TN 37160";
