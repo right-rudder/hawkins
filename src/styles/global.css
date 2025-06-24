@@ -93,7 +93,7 @@
 }
 
 .bg-checkered {
-  background-image:linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%), url(../assets/IMG_8303.jpeg);
+  background-image:linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%), url("/shelbyville-tennessee-flight-school-tupelo-mississippi-hawkins-flight-academy-discovery-flight.jpeg");
   z-index: -100;
 }
 
