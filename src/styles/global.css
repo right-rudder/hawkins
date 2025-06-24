@@ -83,7 +83,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg");
+  background-image: url(../assets/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
