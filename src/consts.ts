@@ -15,6 +15,8 @@ export const KEYWORDS =
 
 export const LOGO = "/src/assets/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-1.png";
 
+export const FAVICON = "/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg";
+
 export const FOOTER_LOGO = "/src/assets/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-hawkins-logo-transparent-file.png";
 
 // LOCATIONS
