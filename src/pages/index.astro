@@ -6,6 +6,7 @@ import Bento2Row from "../components/Bento2Row.astro";
 import CTAGlass from "../components/CTAGlass.astro";
 import FeaturesCenterGrid from "../components/FeaturesCenterGrid.astro";
 import AboutSec from "../components/AboutSec.astro";
+import Enroll from "../components/Enroll.astro";
 ---
 
 <BaseLayout
@@ -15,8 +16,13 @@ import AboutSec from "../components/AboutSec.astro";
 	class="bg-white text-black"
 >
 	<Hero />
+	<div id="new-to-flying"></div>
 	<Bento2Row />
+	<div id="programs"></div>
 	<CTAGlass />
 	<FeaturesCenterGrid />
+	<div id="about"></div>
 	<AboutSec />
+	<div id="enroll-now" class="scroll-my-20 lg:scroll-my-28"></div>
+	<Enroll />
 </BaseLayout>
