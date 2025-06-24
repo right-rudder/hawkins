@@ -83,11 +83,21 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-Untitled-design-2.svg");
+  background-image: url("hawkins-flight-academy-logo-shelbyville-tennessee-tupelo-mississippi-flight-school-logo-button.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.07;
   filter: grayscale(1);
   z-index: -1;
+}
+
+.bg-checkered {
+  background-image:linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%), url(../assets/IMG_8303.jpeg);
+  z-index: -100;
+}
+
+
+* {
+  @apply box-border;
 }
