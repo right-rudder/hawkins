@@ -75,7 +75,7 @@
 
 .bg-logo {
   position: relative;
-  background: linear-gradient(to right, #ffffffc2 0%, #ffffffc2 100%);
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
   z-index: 0;
 }
 

@@ -6,12 +6,21 @@ import {
   EMAIL_ADDRESS,
 } from "../consts";
 import EnrollForm from "../components/EnrollForm.astro";
+import ImageComp from "../components/ImageComp.astro";
 ---
 
 <section
-  class="bg-checkered bg-fixed text-accent-100 scroll-my-20 lg:scroll-my-28"
+  class="relative text-accent-100 scroll-my-20 lg:scroll-my-28"
   id="contact"
 >
+  <div class="fixed inset-0 -z-10 pointer-events-none">
+    <ImageComp
+      imagePath="/src/assets/stock/stock-tadeu-jnr-kAzSa_azENM-unsplash.jpg"
+      imageAlt="Background Image"
+      styles="w-full h-full object-cover -z-50"
+    />
+    <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
+  </div>
   <div class="relative z-10 max-w-7xl mx-auto">
     <div class="w-full flex flex-col items-center">
       <h2
