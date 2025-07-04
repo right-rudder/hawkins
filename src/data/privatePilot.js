@@ -72,7 +72,6 @@ const privatePilot = {
       imageAlt: "Private Pilot student training with Hawkins Flight Academy",
       simulator: true,
     },
-    simulator: true,
     faqs: {
       title: "Private Pilot FAQs",
       questions: [
