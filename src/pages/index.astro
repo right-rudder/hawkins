@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import HomeLayout from "../layouts/HomeLayout.astro"
 import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS } from "../consts";
 import Hero from "../components/Hero.astro";
 import Bento2Row from "../components/Bento2Row.astro";
@@ -11,7 +11,7 @@ import FAQs from "../components/FAQs.astro";
 import CTASplitImage from "../components/CTASplitImage.astro";
 ---
 
-<BaseLayout
+<HomeLayout
 	siteTitle={SITE_TITLE}
 	siteDescription={SITE_DESCRIPTION}
 	keywords={KEYWORDS}
@@ -30,4 +30,4 @@ import CTASplitImage from "../components/CTASplitImage.astro";
 	<Enroll />
 	<FAQs />
 	<CTASplitImage />
-</BaseLayout>
+</HomeLayout>
