@@ -65,7 +65,7 @@ const privatePilot = {
       ],
       secondParagraph:
         "Our Shelbyville and Tupelo locations offer low-traffic environments, perfect for both solo practice and focused instruction. Whether you plan to fly for fun or move on to a commercial career, this course sets the foundation.",
-      ctaTitle: `<a>Apply Today</a> or Schedule a Discovery Call`,
+      ctaTitle: `<a href="#contact" class="text-accent-600 hover:brightness-125 transition-all duration-300">Apply Today</a> or Schedule a <a href="#contact" class="text-accent-600 hover:brightness-125 transition-all duration-300">Discovery Call</a>`,
       ctaParagraph:
         "Want to learn more before you commit? Talk to an advisor or apply now to start training on your schedule.",
       imagePath: "/src/assets/IMG_4669-scaled.jpg",
