@@ -35,9 +35,10 @@ const { data } = Astro.props;
   <ContentSticky
     pageContent={data.content}
   />
+  
+	<FAQs pageContent={data.faqs}/>
 
 	<div id="contact" class="scroll-my-20 lg:scroll-my-28"></div>
 	<Enroll />
-	<FAQs pageContent={data.faqs}/>
   <CTASplitImage />
 </BaseLayout>
