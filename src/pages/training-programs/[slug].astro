@@ -2,6 +2,10 @@
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import programs from "../../data/programs.js";
 import HeaderCards from "../../components/HeaderCards.astro";
+import ContentSticky from "../../components/ContentSticky.astro";
+import Enroll from "../../components/Enroll.astro";
+import FAQs from "../../components/FAQs.astro";
+import CTASplitImage from "../../components/CTASplitImage.astro";
 
 export function getStaticPaths() {
   return programs.map(({ data }) => {
@@ -27,4 +31,12 @@ const { data } = Astro.props;
   <HeaderCards
     pageContent={data.header}
   />
+
+  <ContentSticky
+    pageContent={data.content}
+  />
+	<div id="contact" class="scroll-my-20 lg:scroll-my-28"></div>
+	<Enroll />
+	<FAQs pageContent={data.faqs}/>
+  <CTASplitImage />
 </BaseLayout>
