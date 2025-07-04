@@ -70,7 +70,9 @@ const privatePilot = {
         "Want to learn more before you commit? Talk to an advisor or apply now to start training on your schedule.",
       imagePath: "/src/assets/IMG_4669-scaled.jpg",
       imageAlt: "Private Pilot student training with Hawkins Flight Academy",
+      simulator: true,
     },
+    simulator: true,
     faqs: {
       title: "Private Pilot FAQs",
       questions: [
