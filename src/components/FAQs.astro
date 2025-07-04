@@ -1,37 +1,5 @@
 ---
-const faqs = {
-  title: "Frequently Asked Questions",
-  questions: [
-    {
-      question: "Where is Hawkins Flight Academy located?",
-      answer: "We operate out of two locations: Shelbyville, TN (KSYI) and Tupelo, MS (KTUP). Both locations offer modern training fleets and full-time instruction."
-    },
-    {
-      question: "What type of aircraft do you use for training?",
-      answer: "Our fleet includes RV-12s with Garmin G3X glass cockpits, a Piper Cherokee 140, a Vector Harmony, and a Cessna 172. All aircraft are maintained to the highest safety standards."
-    },
-    {
-      question: "Do you offer accelerated programs?",
-      answer: "Yes. We specialize in fast-track training for career pilots, with personalized scheduling to help you move from zero experience to CFI as efficiently as possible."
-    },
-    {
-      question: "How does your pricing work?",
-      answer: "We offer program-based pricing on our RV-12s—no hourly rental required. This helps keep training costs predictable and affordable for students."
-    },
-    {
-      question: "Is financing available?",
-      answer: "Yes, we work with trusted aviation finance providers to offer flexible financing options for eligible students."
-    },
-    {
-      question: "Can I schedule a discovery flight?",
-      answer: "Absolutely. A discovery flight is the best way to experience what it’s like to train at Hawkins. Contact us to book one at either location."
-    },
-    {
-      question: "Do you train full-time and part-time students?",
-      answer: "Yes. Whether you're training on weekends or pursuing an accelerated full-time program, our instructors will tailor your schedule to meet your goals."
-    }
-  ]
-}
+const { pageContent } = Astro.props;
 
 let activeIndex = -1
 function toggle(index) {
@@ -42,9 +10,9 @@ function toggle(index) {
 <div class="bg-white">
   <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
     <div class="mx-auto max-w-4xl">
-      <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{faqs.title}</h2>
+      <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{pageContent.title}</h2>
       <dl class="mt-16 divide-y divide-gray-900/10" id="faq-list">
-        {faqs.questions.map((faq, index) => (
+        {pageContent.questions.map((faq, index) => (
           <div class="py-6 first:pt-0 last:pb-0">
             <button
               type="button"
