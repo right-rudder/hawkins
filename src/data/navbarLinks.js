@@ -18,7 +18,7 @@ export const navbarLinks = [
       },
       {
         name: "Commercial Pilot",
-        link: "/training-programs/commercial-pilot-training",
+        link: "/training-programs/commercial-pilot",
       },
       {
         name: "Multi-Engine Rating",
