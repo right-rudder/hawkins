@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
 import programs from "../../data/programs.js";
 import HeaderCards from "../../components/HeaderCards.astro";
 import ContentSticky from "../../components/ContentSticky.astro";
+import CTAVibes from "../../components/CTAVibes.astro";
 import Enroll from "../../components/Enroll.astro";
 import FAQs from "../../components/FAQs.astro";
 import CTASplitImage from "../../components/CTASplitImage.astro";
@@ -35,10 +36,11 @@ const { data } = Astro.props;
   <ContentSticky
     pageContent={data.content}
   />
-  
-	<FAQs pageContent={data.faqs}/>
 
+  <CTAVibes />
+  
 	<div id="contact" class="scroll-my-20 lg:scroll-my-28"></div>
 	<Enroll />
+  <FAQs pageContent={data.faqs}/>
   <CTASplitImage />
 </BaseLayout>
