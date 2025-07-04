@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import programs from "../../data/programs.js";
+import HeaderCards from "../../components/HeaderCards.astro";
+
+export function getStaticPaths() {
+  return programs.map(({ data }) => {
+    return {
+      params: { slug: data.slug },
+      props: {
+        data,
+      },
+    };
+  });
+}
+
+const { data } = Astro.props;
+
+---
+
+<BaseLayout
+	siteTitle={data.title}
+	siteDescription={data.description}
+	keywords={data.keywords}
+	class="bg-white text-black"
+>
+  <HeaderCards
+    pageContent={data.header}
+  />
+</BaseLayout>
