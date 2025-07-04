@@ -14,19 +14,19 @@ export const navbarLinks = [
       },
       {
         name: "Instrument Rating",
-        link: "/programs/instrument-rating",
+        link: "/training-programs/instrument-rating",
       },
       {
         name: "Commercial Pilot",
-        link: "/programs/commercial-pilot-training",
+        link: "/training-programs/commercial-pilot-training",
       },
       {
         name: "Multi-Engine Rating",
-        link: "/programs/multi-engine-rating",
+        link: "/training-programs/multi-engine-rating",
       },
       {
         name: "Flight Instructor",
-        link: "/programs/certified-flight-instructor-cfi",
+        link: "/training-programs/certified-flight-instructor-cfi",
       },
     ],
   },
