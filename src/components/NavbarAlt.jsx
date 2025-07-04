@@ -116,14 +116,14 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="group-last:block font-medium text-2xl duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-500 group-last:hover:no-underline group-last:border group-last:hover:border-accent-500"
+                          className="group-last:block font-medium text-2xl duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-800 group-last:hover:no-underline group-last:border group-last:hover:border-accent-800"
                         >
                           <span className="relative font-medium block italic group-last:skew-x-12 text-white group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-medium cursor-default text-white text-2xl duration-300 hover:underline decoration-accent-300 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-medium cursor-default text-white text-2xl duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -134,7 +134,7 @@ const Navbar = ({ pathname }) => {
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "scale-110 bg-accent-600 text-white" : ""} relative -skew-x-12 hover:bg-accent-600 hover:scale-110 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
+                              className={`${isActive(subitem, pathname) ? "scale-110 bg-accent-800 text-white" : ""} relative -skew-x-12 hover:bg-accent-800 hover:scale-110 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -272,7 +272,7 @@ const Navbar = ({ pathname }) => {
         </a>
 
         <div
-          className={`absolute w-full h-44 bg-accent-300 top-0 z-20 duration-500 ease-in-out  ${
+          className={`absolute w-full h-44 bg-accent-500 top-0 z-20 duration-500 ease-in-out  ${
             openMobile
               ? "translate-x-0 opacity-90"
               : "-translate-x-full opacity-0"
@@ -290,7 +290,7 @@ const Navbar = ({ pathname }) => {
                 <a
                   href={item.link}
                   target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                  className="font-normal text-3xl block p-5 duration-300 text-white border-accent-200 whitespace-nowrap group-last:bg-accent-600 group-last:font-medium group-last:border-2 group-last:mt-5 group-last:py-4 group-last:px-8 group-last:-skew-x-12 group-last:text-center group-last:mx-5"
+                  className="font-normal text-3xl block p-5 duration-300 text-white border-accent-200 whitespace-nowrap group-last:bg-accent-800 group-last:font-medium group-last:border-2 group-last:mt-5 group-last:py-4 group-last:px-8 group-last:-skew-x-12 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
@@ -302,7 +302,7 @@ const Navbar = ({ pathname }) => {
                     `}
                   >
                     <IoIosArrowForward
-                      className={`${hoveredIndex === index ? "text-accent-600" : "text-accent-600"} size-5`}
+                      className={`${hoveredIndex === index ? "text-accent-800" : "text-accent-800"} size-5`}
                     />
                   </div>
                 </div>
