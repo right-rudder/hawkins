@@ -10,7 +10,7 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Private Pilot",
-        link: "/programs/private-pilot-course",
+        link: "/training-programs/private-pilot#",
       },
       {
         name: "Instrument Rating",
