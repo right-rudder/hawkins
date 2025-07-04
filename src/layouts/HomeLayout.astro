@@ -1,0 +1,36 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS } from "../consts";
+import Navbar from "../components/Navbar";
+const { pathname } = Astro.url;
+const { siteTitle, siteDescription, keywords } = Astro.props;
+import ChatWidget from "../components/ChatWidget.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Google Tag Manager -->
+    <!-- End Google Tag Manager -->
+    <BaseHead
+      title={siteTitle || SITE_TITLE}
+      description={siteDescription || SITE_DESCRIPTION}
+      keywords={keywords || KEYWORDS}
+    />
+  </head>
+  <body class="font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- <Banner /> -->
+    <header class="w-full h-0 sticky inset-0 z-50 font-bebas">
+      <Navbar pathname={pathname} client:load />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <ChatWidget />
+  </body>
+</html>
