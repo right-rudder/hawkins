@@ -1,0 +1,67 @@
+---
+import ImageComp from "../components/ImageComp.astro";
+
+const images = [
+  "/src/assets/Matt-1536x1292.jpg",
+  "/src/assets/logan.png",
+  "/src/assets/IMG_4641.jpg",
+  "/src/assets/Dan_Bartels-scaled.jpg",
+];
+---
+
+<div class="overflow-hidden bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="max-w-4xl">
+      <p class="text-base/7 font-semibold text-accent-800">Why Choose Us</p>
+      <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+        Join the Hawkins Flight Family
+      </h1>
+      <p class="mt-6 text-xl/8 text-balance text-gray-700">
+        Whether you're chasing a lifelong dream or planning a career in aviation, Hawkins Flight Academy is here to help you get there—with great instructors, modern aircraft, and a friendly, supportive environment.
+      </p>
+      <p class="mt-6 text-base/7 text-gray-600">
+        From your first takeoff to earning your pilot certificate, you’ll be part of a community that believes in personal attention, safety, and helping every student succeed.
+      </p>
+      <div class="mt-10">
+        <a
+          href="/contact-us"
+          class="inline-block rounded-md bg-primary-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+        >
+          Schedule a Discovery Call <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Responsive Image Grid -->
+    <div class="mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:gap-8">
+      <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+        <ImageComp
+          imagePath={images[0]}
+          imageAlt="Instructor smiling"
+          styles="block size-full object-cover"
+        />
+      </div>
+      <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+        <ImageComp
+          imagePath={images[1]}
+          imageAlt="Smiling team member"
+          styles="block size-full object-cover"
+        />
+      </div>
+      <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+        <ImageComp
+          imagePath={images[2]}
+          imageAlt="Hawkins aircraft flying"
+          styles="block size-full object-cover"
+        />
+      </div>
+      <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+        <ImageComp
+          imagePath={images[3]}
+          imageAlt="Flight instructor with headset"
+          styles="block size-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>
