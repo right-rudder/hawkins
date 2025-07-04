@@ -80,7 +80,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           navBar || openMobile 
-            ? "bg-white/40 backdrop-blur-sm drop-shadow-sm"
+            ? "bg-white/60 backdrop-blur-sm drop-shadow-sm"
             : "bg-transparent"
         } duration-500`}
       >
@@ -118,7 +118,7 @@ const Navbar = ({ pathname }) => {
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
                           className="group-last:block font-medium text-2xl duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] group-last:italic border-accent whitespace-nowrap group-last:font-normal group-last:bg-white group-last:px-0 group-last:rounded-sm group-last:-skew-x-12 group-last:hover:bg-accent-800 group-last:hover:no-underline group-last:border group-last:hover:border-accent-800"
                         >
-                          <span className="relative font-medium block italic group-last:skew-x-12 text-white group-last:text-muted-950 group-last:py-3 group-last:px-5 group-last:hover:text-white">
+                          <span className={`${navBar || openMobile ? "text-accent-800" : "text-white"} relative font-medium block italic group-last:skew-x-12 group-last:text-accent-950 group-last:py-3 group-last:px-5 group-last:hover:text-white`}>
                             {item.name}
                           </span>
                         </a>
